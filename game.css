@@ -1,0 +1,275 @@
+@font-face {
+  font-family: 'Nature';
+  src: url('fonts/ZT_nature/ZT Nature - OT/ZTNature-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'NatureLite';
+  src: url('fonts/ZT_nature/ZT Nature - OT/ZTNature-Thin.otf') format('opentype');
+}
+
+*{
+    margin:0px;
+    padding:0px;
+    font-family: 'Nature';
+}
+
+html{
+    overflow: hidden;
+}
+
+#MusicButton{
+    z-index: 1;
+    position: absolute;
+    bottom:10px;
+    left:10px;
+    height:30px;
+    width:30px;
+    border-radius: 50%;
+    background-image: url("Images/audioOff.png");
+    background-color:transparent;
+    background-size: 20px;        
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+#SoundButton{
+    z-index: 1;
+    position: absolute;
+    bottom:10px;
+    left:50px;
+    height:30px;
+    width:30px;
+    border-radius: 50%;
+    background-image: url("Images/SoundOn.png");
+    background-color:transparent;
+    background-size: 20px;        
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+.main {
+    background-color: #11120d;
+    height: 98.8vh;
+    width:1fr;
+    padding:5px;
+    display:grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 3fr 1fr;
+    row-gap: 10px;
+    column-gap:10px;
+    overflow: hidden;
+}
+
+.main .Screen,.Options,.InputValue,.SetTime{
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.Screen{
+    grid-area: 1 / 1 / span 1 / span 2;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+#ScreenMain .One .Options{
+    position: absolute;
+    height:500px;
+    right:-480px;
+    background-color: #11120d;
+    display:grid;
+    grid-template-columns: 0.5fr 3fr;
+    grid-template-rows: 1fr;
+    width:550px;
+}
+
+#ScreenMain .One .Options .ArrowDiv{
+    grid-area:1/1/span 5/1;
+    padding:5px;
+}
+
+#ScreenMain .One .Options .ArrowDiv button{
+    width:50px;
+    height: 50px;
+    background-color: transparent;
+    color:#fffbf4;
+    border:1px solid #fffbf4;
+}
+
+
+#ScreenMain .One .Options .DiffandTheme{
+    display: flex;
+    row-gap: 20px;
+    flex-direction: column;
+}
+
+#ScreenMain .One .Options .DiffandTheme p{
+    font-size: 70px;
+    text-align: right;
+    margin-bottom: 20px;
+    color:#fffbf4;
+}
+
+#ScreenMain .One .Options .DiffandTheme button{
+    background-color: transparent;
+    color:#fffbf4;
+    border:1px solid #fffbf4;
+}
+
+#ScreenMain .One .Options .DiffandTheme button:hover{
+    background-color: #fffbf4;
+    color:#41444B;
+    
+}
+
+#ScreenMain .One .Options .DiffandTheme #Theme{
+    margin-top: 20px;
+}
+
+#ScreenMain {
+    height:100%;
+    width:1fr;
+}
+
+#ScreenMain div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100%;
+}
+
+#ScreenMain .One {
+    color:#fffbf4;
+    background-color: #11120d;
+    flex-direction: column;
+}
+
+#ScreenMain .One h1 {
+    font-size: 250px;
+}
+
+#ScreenMain .One button{
+    background-color: #fffbf4;
+    height:40px;
+    width:150px;
+    border-radius: 30px;
+    border:none;
+    font-size: 20px;
+    transition: all 0.2s ease-in;
+}
+
+#ScreenMain .One button:hover{
+    background-color: #FFD41D;
+}
+
+#ScreenMain .Two{
+    background-color: #5A7863;
+    color:#fffbf4;
+}
+
+#ScreenMain .Two .TimeText{
+    position:absolute;
+    top:105%;
+    left:3%;
+    height:30px;
+    font-size:30px;
+}
+
+#ScreenMain .Two #Num {
+    font-size: 300px;
+}
+
+
+
+#ScreenMain .Three{
+    background-color: #FFA239;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr 1fr;
+}
+
+#ScreenMain .Three .ScoreDiv{
+    display: block;
+    font-size: 300px;
+    margin-left:20px;
+    margin-top:-40px;
+    color:whitesmoke;
+}
+
+#ScreenMain .Three .ReturnButtons{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+#ScreenMain .Three .ReturnButtons button{
+    transition:all 0.2s ease-in;
+    border:none;
+}
+
+#ScreenMain .Three .ReturnButtons button:hover{
+    background-color: #fffbf4;
+    color:#FFA239;
+}
+
+#ScreenMain .Three .ReturnButtons button{
+    height:50px;
+    width:300px;
+    border-radius: 50px;
+    border:1px solid #fffbf4;
+    font-size: 20px;
+    background-color: transparent;
+    color:#fffbf4;
+}
+
+
+
+.InputValue{
+    background-color: #93ad2c;
+    grid-area:2/1/2/span 2;
+}
+
+.InputValue div{
+    position:absolute;
+    color:#fffbf4;
+    text-align: center;
+    width:100%;
+    bottom:100px;
+}
+
+.InputValue div p{
+    font-family: 'NatureLite';
+}
+
+.InputValue div p a{
+    color:#ff0080
+}
+
+.InputValue div p a:focus{
+    color:#FFD41D;
+}
+
+.InputValue input {
+    height:100%;
+    width:100%;
+    text-align: center;
+    border:none;
+    appearance: none;
+    -webkit-appearance: none;
+    font-size: 100px;
+    background-color: #11120d;
+    color:#fffbf4;
+}
+
+.InputValue input:focus{
+    outline:none;
+}
+
+.SetTime {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
